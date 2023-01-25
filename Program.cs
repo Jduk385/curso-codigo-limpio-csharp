@@ -57,14 +57,11 @@ namespace ToDo
                 string optionToRemove = Console.ReadLine();
                 // Remove one position
                 int indexToRemove = Convert.ToInt32(optionToRemove) - 1;
-                if (indexToRemove > -1)
+                if (indexToRemove > -1 && taskList.Count > 0)
                 {
-                    if (taskList.Count > 0)
-                    {
-                        string taskRemoved = taskList[indexToRemove];
-                        taskList.RemoveAt(indexToRemove);
-                        Console.WriteLine("Tarea " + taskRemoved + " eliminada");
-                    }
+                    string taskRemoved = taskList[indexToRemove];
+                    taskList.RemoveAt(indexToRemove);
+                    Console.WriteLine("Tarea " + taskRemoved + " eliminada");
                 }
             }
             catch (Exception)
