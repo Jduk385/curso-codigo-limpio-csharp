@@ -101,10 +101,8 @@ namespace ToDo
         private static void ShowTaskList()
         {
             Console.WriteLine("----------------------------------------");
-            for (int i = 0; i < taskList.Count; i++)
-            {
-                Console.WriteLine((i + 1) + ". " + taskList[i]);
-            }
+            int indexNumber = 0;
+            taskList.ForEach(task => Console.WriteLine(++indexNumber +". " + task));
             Console.WriteLine("----------------------------------------");
         }
     }
